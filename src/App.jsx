@@ -3,6 +3,7 @@ import "./index.css";
 
 function App() {
   const [counterValue, setCounterValue] = useState(0);
+  const [history, setHistory] = useState([]);
 
   const increment = () => {
     setCounterValue((counterValue) => counterValue + 1);
@@ -20,6 +21,8 @@ function App() {
     setCounterValue(0);
   };
 
+  const addToHistory = (newValue) => {};
+
   return (
     <div className="App">
       <div className="loggingContainer">
@@ -27,7 +30,7 @@ function App() {
           Current: <span>{counterValue}</span>
         </p>
         <p>
-          History: <span>1</span>
+          History: <span>{history}</span>
         </p>
       </div>
       <div className="mainContainer">
