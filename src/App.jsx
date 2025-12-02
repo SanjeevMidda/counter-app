@@ -33,9 +33,17 @@ function App() {
         <p>
           Current: <span>{counterValue}</span>
         </p>
-        <p>
-          History: <span>{history}</span>
-        </p>
+
+        <div className="historyContainer">
+          <p>History</p>
+
+          <div className="previousCounterValues">
+            {history.map((item) => {
+              return <span>{item}</span>;
+            })}
+          </div>
+          {}
+        </div>
       </div>
       <div className="mainContainer">
         <div className="counterContainer">
