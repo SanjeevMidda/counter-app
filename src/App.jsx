@@ -1,6 +1,9 @@
+import { useState } from "react";
 import "./index.css";
 
 function App() {
+  const [counterValue, setCounterValue] = useState(10);
+
   const increment = () => {};
 
   const decrement = () => {};
@@ -11,7 +14,7 @@ function App() {
     <div className="App">
       <div className="loggingContainer">
         <p>
-          Current: <span>0</span>
+          Current: <span>{counterValue}</span>
         </p>
         <p>
           History: <span>1</span>
@@ -19,7 +22,7 @@ function App() {
       </div>
       <div className="mainContainer">
         <div className="counterContainer">
-          <h1>0</h1>
+          <h1>{counterValue}</h1>
         </div>
         <div className="actionsContainer">
           <button id="add">+</button>
