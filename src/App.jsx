@@ -2,14 +2,18 @@ import { useState } from "react";
 import "./index.css";
 
 function App() {
-  const [counterValue, setCounterValue] = useState(10);
+  const [counterValue, setCounterValue] = useState(0);
 
   const increment = () => {
     setCounterValue((counterValue) => counterValue + 1);
   };
 
   const decrement = () => {
-    setCounterValue((counterValue) => counterValue - 1);
+    if (counterValue === 0) {
+      setCounterValue(0);
+    } else {
+      setCounterValue((counterValue) => counterValue - 1);
+    }
   };
 
   const reset = () => {
@@ -31,11 +35,17 @@ function App() {
           <h1>{counterValue}</h1>
         </div>
         <div className="actionsContainer">
-          <button id="add">+</button>
+          <button id="increment" onClick={increment}>
+            +
+          </button>
           <div className="resetCircle">
-            <button id="reset">R</button>
+            <button id="reset" onClick={reset}>
+              R
+            </button>
           </div>
-          <button id="minus">-</button>
+          <button id="decrement" onClick={decrement}>
+            -
+          </button>
         </div>
       </div>
     </div>
