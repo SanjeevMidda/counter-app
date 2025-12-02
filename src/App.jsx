@@ -24,7 +24,7 @@ function App() {
   };
 
   const addToHistory = (newValue) => {
-    setHistory((history) => [...history, newValue]);
+    setHistory((history) => [newValue, ...history]);
   };
 
   return (
