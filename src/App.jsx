@@ -7,6 +7,7 @@ function App() {
 
   const increment = () => {
     setCounterValue((counterValue) => counterValue + 1);
+    addToHistory(counterValue);
   };
 
   const decrement = () => {
@@ -14,6 +15,7 @@ function App() {
       setCounterValue(0);
     } else {
       setCounterValue((counterValue) => counterValue - 1);
+      addToHistory(counterValue);
     }
   };
 
@@ -21,7 +23,9 @@ function App() {
     setCounterValue(0);
   };
 
-  const addToHistory = (newValue) => {};
+  const addToHistory = (newValue) => {
+    setHistory((history) => [...history, newValue]);
+  };
 
   return (
     <div className="App">
