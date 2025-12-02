@@ -4,8 +4,12 @@ function App() {
   return (
     <div className="App">
       <div className="loggingContainer">
-        <p>Current: 0</p>
-        <p>History: 1</p>
+        <p>
+          Current: <span>0</span>
+        </p>
+        <p>
+          History: <span>1</span>
+        </p>
       </div>
       <div className="mainContainer">
         <div className="counterContainer">
