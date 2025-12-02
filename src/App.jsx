@@ -1,6 +1,12 @@
 import "./index.css";
 
 function App() {
+  const increment = () => {};
+
+  const decrement = () => {};
+
+  const reset = () => {};
+
   return (
     <div className="App">
       <div className="loggingContainer">
