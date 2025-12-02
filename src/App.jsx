@@ -4,11 +4,17 @@ import "./index.css";
 function App() {
   const [counterValue, setCounterValue] = useState(10);
 
-  const increment = () => {};
+  const increment = () => {
+    setCounterValue((counterValue) => counterValue + 1);
+  };
 
-  const decrement = () => {};
+  const decrement = () => {
+    setCounterValue((counterValue) => counterValue - 1);
+  };
 
-  const reset = () => {};
+  const reset = () => {
+    setCounterValue(0);
+  };
 
   return (
     <div className="App">
