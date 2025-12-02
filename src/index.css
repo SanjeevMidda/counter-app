@@ -25,6 +25,20 @@
   span {
     color: rgb(161, 161, 161);
   }
+
+  .previousCounterValues {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 540px;
+    overflow: scroll;
+    margin-top: 10px;
+
+    span {
+      margin: 5px;
+    }
+  }
 }
 
 .counterContainer {
